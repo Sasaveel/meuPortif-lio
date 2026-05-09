@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santiago Velandia Albornoz - Portifólio</title>
+    <title>Santiago Velandia Albornoz - Portfolio</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -26,7 +26,7 @@
                 Santiago Velandia Albornoz
             </h1>
             <h2 class="text-xl md:text-2xl mt-2 text-gray-600 tracking-widest uppercase">
-                Portifólio
+                Portfolio
             </h2>
         </div>
     </header>
@@ -69,7 +69,7 @@
     <!-- Footer / Contato -->
     <footer class="bg-zinc-950 border-t border-zinc-900 py-10 mt-auto">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h3 class="text-gray-500 mb-6 font-medium tracking-wider uppercase text-sm">Entre em contato</h3>
+            <h3 class="text-gray-500 mb-6 font-medium tracking-wider uppercase text-sm">Contato</h3>
             
             <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
                 <!-- WhatsApp -->
@@ -135,6 +135,12 @@
                 isLogo: false
             }
         ];
+
+        // Otimização: Precarga de imagens para transições instantâneas
+        portifolioData.forEach(item => {
+            const img = new Image();
+            img.src = item.src;
+        });
 
         let currentIndex = 0;
         const imgElement = document.getElementById('carousel-img');
